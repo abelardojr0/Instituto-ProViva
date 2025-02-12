@@ -1,0 +1,49 @@
+.inicio{
+  background-image: url("../assets/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+  height: 60vh;
+}
+
+
+.inicio_texto{
+  font-size: 60px;
+  width: 400px;
+  color: rgba(34,111,93,1);
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.inicio_imagem{
+  max-width: 250px;
+  border-radius: 50%;
+  border: 2px solid white;
+
+}
+
+@media (max-width: 1280px) {
+  .inicio{
+    gap: 20px;
+    height: 100%;
+    padding: 20px;
+
+  }
+  .inicio_texto{
+    font-size: 40px;
+    text-align: center;
+  }
+  .inicio_imagem{
+    max-width: 200px;
+  }
+
+}
+@media (max-width: 768px) {
+  .inicio_imagem{
+    display: none;
+  }
+}

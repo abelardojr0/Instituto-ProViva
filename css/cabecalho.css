@@ -1,0 +1,175 @@
+
+.cabecalho {
+  background: linear-gradient(90deg, rgba(90,147,131,1) 0%, rgba(73,134,116,1) 35%, rgba(34,111,93,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Montserrat", serif;
+  text-transform: uppercase;  
+  /* position: fixed; */
+  width: 100%;
+  z-index: 99;
+}
+
+.cabecalho_infos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 40px;
+  padding-top: 20px;
+  gap: 300px;
+}
+
+.cabecalho_logo{
+  padding-right: 150px;
+  max-width: 280px;
+  transition: 0.5s ease-in-out;
+}
+.cabecalho_logo:hover{
+  transform: scale(1.05);
+}
+
+
+.menu_hamburguer {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cabecalho_nav {
+  display: flex;
+  z-index: 9999;
+  width: 100%;
+
+}
+
+.busca{
+  font-size: 24px;
+  border: 2px solid white;
+  /* background-color: transparent; */
+  outline: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+.cabecalho_menu {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cabecalho_menu li {
+  flex-grow: 1; 
+  text-align: center;
+}
+
+.cabecalho_menu_item{
+  display: block;
+  color: white;
+  background-color:  rgba(34,111,93,1);
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: 0.3s ease-in-out;
+  font-size: 18px;
+  border: 1px solid white;
+ 
+}
+
+.cabecalho_menu_item:hover{
+  background-color:  rgba(90,147,131,1)
+}
+
+
+
+.cabecalho_icons {
+  display: flex;
+  gap: 10px; /* Espaçamento entre os ícones */
+}
+
+.cabecalho_icons i {
+  font-size: 40px;
+  color: white;
+  transition: 0.5s ease-in-out; 
+}
+
+.cabecalho_icons i:hover {
+  color:  rgba(90,147,131,1);
+  transform: scale(1.2);
+}
+.cabecalho_botao{
+
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
+  border: 1px solid var(--cor-secundaria);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.236);
+
+}
+
+.cabecalho_botao:hover{
+  color: var(--cor-principal);
+  background-color: var(--cor-secundaria)
+}
+
+@media (max-width: 1280px) {
+  .cabecalho_infos{
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .cabecalho_logo{
+    padding: 0;
+    max-width: 200px;
+  }
+  .cabecalho_menu_item{
+    font-size: 12px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .cabecalho {
+    padding: 10px;
+    position: static;
+  }
+
+  .cabecalho_logo{
+    max-width: 200px;
+  }
+  .menu_hamburguer {
+    display: block;
+  }
+
+  .cabecalho_nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--cor-principal);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .cabecalho_menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cabecalho_nav.ativo {
+    display: block;
+  }
+  .cabecalho_botao{
+    display: none;
+  }
+}
